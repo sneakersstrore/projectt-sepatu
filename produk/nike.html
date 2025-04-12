@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneakers Store</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      header .logo img {
+        height: 80px;
+      }
+
+      nav a {
+        margin: 0 1rem;
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+      }
+
+      .search-heart {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .search-heart input {
+        padding: 0.3rem 0.6rem;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+      }
+
+      .product-section {
+        padding: 40px 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+
+      .product-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 16px;
+        padding: 15px;
+        text-align: left;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .product-card img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: contain;
+      }
+
+      .label {
+        color: red;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 10px;
+        display: inline-block;
+      }
+
+      .product-card h3 {
+        font-size: 16px;
+        margin: 5px 0;
+      }
+
+      .desc {
+        font-size: 13px;
+        color: #666;
+        line-height: 1.4;
+      }
+
+      .price {
+        font-weight: bold;
+        margin-top: 6px;
+        font-size: 15px;
+      }
+
+      .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .actions button {
+        background-color: #f1f1f1;
+        border: none;
+        font-size: 18px;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+      }
+
+      .actions span {
+        font-size: 18px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../img/logo-sepatu.png" alt="Sneakers Store" />
+      </div>
+      <nav>
+        <a href="../index.html">Beranda</a>
+        <a href="../tentang-kami.html">Tentang Kami</a>
+        <a href="../merek.html">Merek</a>
+        <a href="../hubungi-kami.html">Hubungi Kami</a>
+      </nav>
+      <div class="search-heart">
+        <input type="text" class="search-box" placeholder="Search" />
+        <span style="font-size: 22px">❤️</span>
+      </div>
+    </header>
+
+    <section class="product-section">
+      <div class="container">
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="../img/Nike Air Force 1.png" alt="Nike Air Force 1 LV8" />
+            <span class="label">Bestseller</span>
+            <h3>Nike Air Force 1 LV8</h3>
+            <p class="desc">Older Kid's Shoes<br />1 colour</p>
+            <p class="price">Rp 1.158.000</p>
+            <div class="actions">
+              <button>+</button>
+              <span>♡</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="../img/Nike-Air-Force-1 '07.png"
+              alt="Nike Air Force 1 '07 LV8"
+            />
+            <span class="label">Bestseller</span>
+            <h3>Nike Air Force 1 '07 LV8</h3>
+            <p class="desc">Women's Shoes<br />1 colour</p>
+            <p class="price">Rp 1.528.000</p>
+            <div class="actions">
+              <button>+</button>
+              <span>♡</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="../img/Nike-Air-Force-1 Shadow.png"
+              alt="Nike Air Force 1 Shadow"
+            />
+            <span class="label">Bestseller</span>
+            <h3>Nike Air Force 1 Shadow</h3>
+            <p class="desc">Women's Shoes<br />1 colour</p>
+            <p class="price">Rp 1.678.000</p>
+            <div class="actions">
+              <button>+</button>
+              <span>♡</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="../img/Nike-Air-Max-90 SE.png"
+              alt="Nike Air Max 90 LV8 SE"
+            />
+            <span class="label">Bestseller</span>
+            <h3>Nike Air Max 90 LV8 SE</h3>
+            <p class="desc">Women's Shoes<br />1 colour</p>
+            <p class="price">Rp 2.379.000</p>
+            <div class="actions">
+              <button>+</button>
+              <span>♡</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="../img/Nike-Air-Max-90.png" alt="Nike Air Max 90 LV8" />
+            <span class="label">Bestseller</span>
+            <h3>Nike Air Max 90 LV8</h3>
+            <p class="desc">Women's Shoes<br />1 colour</p>
+            <p class="price">Rp 2.199.000</p>
+            <div class="actions">
+              <button>+</button>
+              <span>♡</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="../img/Nike-Air-Max 90 Futura.png"
+              alt="Nike Air Max 90 Futura"
+            />
+            <span class="label">Bestseller</span>
+            <h3>Nike Air Max 90 Futura</h3>
+            <p class="desc">Women's Shoes<br />1 colour</p>
+            <p class="price">Rp 2.199.000</p>
+            <div class="actions">
+              <button>+</button>
+              <span>♡</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="../img/Nike-Air-VaporMax Plus.png"
+              alt="Nike Air VaporMax Plus"
+            />
+            <span class="label">Bestseller</span>
+            <h3>Nike Air VaporMax Plus</h3>
+            <p class="desc">Men's Shoes<br />1 colour</p>
+            <p class="price">Rp 2.779.000</p>
+            <div class="actions">
+              <button>+</button>
+              <span>♡</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="../img/Nike-Air VaporMax-Flyknit.png"
+              alt="Nike Air VaporMax 2023 Flyknit"
+            />
+            <span class="label">Bestseller</span>
+            <h3>Nike Air VaporMax 2023 Flyknit</h3>
+            <p class="desc">Men's Shoes<br />1 colour</p>
+            <p class="price">Rp 3.269.000</p>
+            <div class="actions">
+              <button>+</button>
+              <span>♡</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="../img/Nike-Air VaporMax 2023-Flyknit.png"
+              alt="Nike Air VaporMax 2023 Flyknit"
+            />
+            <span class="label">Bestseller</span>
+            <h3>Nike Air VaporMax 2023 Flyknit</h3>
+            <p class="desc">Men's Shoes<br />1 colour</p>
+            <p class="price">Rp 3.269.000</p>
+            <div class="actions">
+              <button>+</button>
+              <span>♡</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

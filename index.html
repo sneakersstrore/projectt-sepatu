@@ -1,0 +1,342 @@
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sneakers Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: #f7f7f7;
+      color: #333;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    header .logo img {
+      height: 80px;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+    .search-heart {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .search-heart input {
+      padding: 0.3rem 0.6rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .hero {
+      position: relative;
+      padding: 2rem;
+    }
+    .slider {
+      position: relative;
+      height: 700px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .slider img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: opacity 1s ease-in-out;
+      opacity: 0;
+    }
+    .slider img.active {
+      opacity: 1;
+    }
+    .hero-text {
+      position: absolute;
+      top: 4rem;
+      left: 4rem;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 800;
+      z-index: 2;
+    }
+    .info-bar {
+      margin: 1rem auto;
+      background: #333;
+      color: white;
+      padding: 0.75rem 1rem;
+      text-align: center;
+      border-radius: 24px;
+      max-width: 90%;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .features {
+      display: flex;
+      justify-content: space-around;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .feature {
+      width: 30%;
+      min-width: 260px;
+      padding: 1rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .feature img {
+      width: 48px;
+      margin-bottom: 1rem;
+    }
+    .feature h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    .feature p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+    .brand-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .brand-card {
+      display: flex;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      max-width: 550px;
+      overflow: hidden;
+    }
+    .brand-card img {
+      width: 50%;
+      object-fit: cover;
+    }
+    .brand-card .content {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .brand-card .brand {
+      font-weight: 600;
+      color: #777;
+      margin-bottom: 0.5rem;
+    }
+    .brand-card .title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .brand-card .desc {
+      font-size: 0.95rem;
+      color: #444;
+    }
+    .btn {
+      margin-top: 0.75rem;
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      width: fit-content;
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 2rem;
+      font-size: 0.95rem;
+    }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+    .footer-section {
+      flex: 1 1 250px;
+    }
+    .footer-section h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-section ul li a,
+    .footer-section a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #444;
+      padding-top: 1rem;
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+  <header>
+    <div class="logo">
+      <img src="img/logo-sepatu.png" alt="Logo Sneakers Store" />
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Beranda</a>
+      <a href="tentang-kami.html">Tentang Kami</a>
+      <a href="merek.html">Merek</a>
+      <a href="#footer">Hubungi Kami</a>
+    </nav>
+    <div class="search-heart">
+      <input type="text" placeholder="Search" />
+      <span>❤️</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="slider">
+      <img src="img/sneakers-hero.png" alt="Hero 1" class="active">
+      <img src="img/sneakers-hero2.png" alt="Hero 2">
+      <img src="img/sneakers-hero3.png" alt="Hero 3">
+      <img src="img/sneakers-hero4.png" alt="Hero 4">
+    </div>
+  </section>
+
+  <script>
+    const sliderImages = document.querySelectorAll('.slider img');
+    let slideIndex = 0;
+    setInterval(() => {
+      sliderImages[slideIndex].classList.remove('active');
+      slideIndex = (slideIndex + 1) % sliderImages.length;
+      sliderImages[slideIndex].classList.add('active');
+    }, 3000);
+  </script>
+
+  <div class="info-bar">
+    Sneakers Store – Temukan Sneakers Impian, Tampil Percaya Diri! 🚀👟
+  </div>
+
+  <section class="features">
+    <div class="feature">
+      <img src="https://img.icons8.com/fluency/48/lock-2.png" alt="Secure">
+      <h3>SIMPAN & LINDUNGI</h3>
+      <p>Selalu aman dengan sistem perlindungan terpercaya dari penipuan dan data.</p>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/fluency/48/shop.png" alt="Best Choice">
+      <h3>PILIHAN TERBAIK</h3>
+      <p>Beragam pilihan terbaik menyesuaikan tren untuk kebutuhan sepatu kamu.</p>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/fluency/48/discount.png" alt="Promo">
+      <h3>PROMO SETIAP HARI</h3>
+      <p>Nikmati diskon besar dan penawaran eksklusif yang selalu tersedia.</p>
+    </div>
+  </section>
+
+  <section class="brand-section">
+    <div class="brand-card">
+        <img src="img/nike.png" alt="Nike">
+        <div class="content">
+            <div class="brand">— Nike</div>
+            <div class="title">Tingkatkan gairah Anda ke tingkat berikutnya dengan produk Nike.</div>
+            <div class="desc">Baik di lapangan, di pusat kebugaran, atau di jalan, Nike akan selalu mendukung Anda agar Anda terus maju. Temukan kekuatan Anda, raih tujuan Anda.</div>
+            <a href="produk/nike.html" class="btn">🛍 Jelajahi</a>
+        </div>
+    </div>
+
+    <div class="brand-card">
+        <img src="img/adidas.png" alt="Adidas">
+        <div class="content">
+            <div class="brand">— Adidas</div>
+            <div class="title">Adidas adalah simbol abadi dari ekspresi diri, kreativitas, dan gaya.</div>
+            <div class="desc">Dengan desain ikonik dan kualitas unggul, Adidas sempurna untuk segala aktivitas. Berani tampil berbeda dengan Adidas dirancang untuk mendukung setiap langkah gerakanmu.</div>
+            <a href="produk/adidas.html" class="btn">🛍 Jelajahi</a>
+        </div>
+    </div>
+
+    <div class="brand-card">
+        <img src="img/puma.png" alt="Puma">
+        <div class="content">
+            <div class="brand">— Puma</div>
+            <div class="title">Dengan teknologi canggih, Puma berikan kenyamanan maksimal</div>
+            <div class="desc">Ringan, responsif, dan dirancang untuk menjelajahi batas. Puma adalah mitra sempurna untuk perjalananmu, dari jalanan kota hingga pegunungan.</div>
+            <a href="produk/puma.html" class="btn">🛍 Jelajahi</a>
+        </div>
+    </div>
+
+    <div class="brand-card">
+        <img src="img/newbalance.png" alt="New Balance">
+        <div class="content">
+            <div class="brand">— New Balance</div>
+            <div class="title">Melangkah lebih percaya diri dan kuat bersama New Balance</div>
+            <div class="desc">Didesain untuk berarti, berlari, atau bersantai, New Balance adalah kombinasi keunggulan desain dan kinerja. Jadikan langkahmu lebih mantap dengan New Balance, dan capai tujuan Anda dengan penuh gaya.</div>
+            <a href="produk/newbalance.html" class="btn">🛍 Jelajahi</a>
+        </div>
+    </div>
+  </section>
+</section>
+
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>Tentang Kami</h3>
+        <p>Sneakers store berkembang sejak awal abad ke-20 dengan merek seperti Nike, Adidas, Puma, dan New Balance. Pada 1980-an, sneakers jadi ikon budaya pop....</p>
+        <a href="tentang-kami.html">Baca Selengkapnya →</a>
+      </div>      
+      <div class="footer-section menu">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="tentang-kami.html">Tentang Kami</a></li>
+          <li><a href="merek.html">Merek</a></li>
+          <li><a href="#footer">Hubungi Kami</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact">
+        <h3>Hubungi Kami</h3>
+        <p>Email : sneakersstore@mail.com</p>
+        <p>Instagram : @Sneakerstore_slebew</p>
+        <p>Whatsapp : (+62) 858-1234-5678</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © 2025 | Sneakers Store</p>
+    </div>
+  </footer>
+</body>
+</html>

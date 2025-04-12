@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami | Sneakers Store</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: #fff;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .logo img {
+        height: 80px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        flex-grow: 1;
+        justify-content: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .search-box {
+        position: relative;
+      }
+
+      .search-box input {
+        padding: 0.5rem 2rem 0.5rem 0.8rem;
+        border: 2px solid #000;
+        border-radius: 25px;
+        font-size: 1rem;
+        outline: none;
+      }
+
+      .search-box button {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #000;
+        font-size: 1rem;
+      }
+
+      .wishlist-icon {
+        font-size: 1.4rem;
+        color: red;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      .hero-sneaker {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+      }
+
+      .hero-card {
+        position: relative;
+        background-color: black;
+        padding: 2rem;
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+        max-width: 750px;
+        overflow: hidden;
+      }
+
+      .hero-card img {
+        width: 90%;
+        max-width: 700px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .hero-title {
+        font-size: 2.8rem;
+        font-weight: 800;
+        text-align: center;
+        margin: 2rem 0 1.5rem;
+        line-height: 1.2;
+        font-family: "Inter", sans-serif;
+        color: #111;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      a.back {
+        display: inline-block;
+        margin-top: 1rem;
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      a.back:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        background-color: #1a1a1a;
+        color: white;
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .footer-section {
+        flex: 1 1 250px;
+        margin: 1rem 0;
+      }
+
+      .footer-section h4 {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .footer-section p,
+      .footer-section a {
+        font-size: 0.9rem;
+        color: #ccc;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+
+      .footer-section a:hover {
+        color: white;
+      }
+
+      .copyright {
+        background-color: #111;
+        color: #ffffff;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.8rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="nav-container">
+        <div class="logo">
+          <img src="img/logo-sepatu.png" alt="Sneakers Store Logo" />
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Beranda</a>
+          <a href="tentang-kami.html">Tentang Kami</a>
+          <a href="merek.html">Merek</a>
+          <a href="hubungi-kami.html">Hubungi Kami</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="search-box">
+            <input type="text" placeholder="Search" />
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </div>
+          <i class="fas fa-heart wishlist-icon" title="Favorit"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1 class="hero-title">Temukan Sneakers Terbatas<br />Tanpa Batasan</h1>
+
+      <section class="hero-sneaker">
+        <div class="hero-card">
+          <div style="position: relative">
+            <img
+              src="img/image.png"
+              alt="Nike Air Max Pulse"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <p>
+        Toko sneakers telah berkembang sejak awal abad ke-20 dengan hadirnya
+        merek-merek ikonik seperti Nike, Adidas, Puma, dan New Balance. Seiring
+        waktu, sneakers tidak hanya menjadi alas kaki fungsional, tetapi juga
+        simbol gaya hidup dan ekspresi diri.
+      </p>
+
+      <p>
+        Pada era 1980-an, sneakers mulai melampaui fungsi olahraga dan berubah
+        menjadi ikon budaya pop, didorong oleh pengaruh musik hip-hop, film,
+        serta komunitas streetwear. Tren ini semakin berkembang di tahun-tahun
+        berikutnya, menjadikan sneakers sebagai bagian dari identitas mode yang
+        terus berevolusi.
+      </p>
+
+      <p>
+        Kami hadir untuk memenuhi kebutuhan para pecinta sneakers dengan koleksi
+        terbaik, mulai dari edisi klasik hingga rilisan terbaru yang eksklusif.
+        Dengan komitmen menghadirkan kualitas dan gaya, kami menjadi destinasi
+        utama bagi Anda yang ingin tampil trendi dan penuh karakter.
+      </p>
+
+      <a class="back" href="index.html">← Kembali ke Beranda</a>
+    </div>
+
+    <footer>
+      <div class="footer-section">
+        <h4>Tentang Kami</h4>
+        <p>
+          Sneakers Store berkembang sejak awal abad ke-20 dengan merek seperti
+          Nike, Adidas, Puma, dan New Balance. Pada 1980-an, sneakers jadi ikon
+          budaya pop dan kini bagian dari gaya hidup modern.
+        </p>
+        <a href="tentang-kami.html">Baca Selengkapnya →</a>
+      </div>
+
+      <div class="footer-section">
+        <h4>Menu</h4>
+        <a href="index.html">Beranda</a>
+        <a href="tentang-kami.html">Tentang Kami</a>
+        <a href="merek.html">Merek</a>
+        <a href="hubungi-kami.html">Hubungi Kami</a>
+      </div>
+
+      <div class="footer-section">
+        <h4>Hubungi Kami</h4>
+        <p>Email : sneakersstore@mail.com</p>
+        <p>Instagram : @Sneakersstore_slebew</p>
+        <p>Whatsapp : (+62) 858-1234-5678</p>
+      </div>
+    </footer>
+
+    <div class="copyright">Copyright © 2025 | Sneakers Store</div>
+  </body>
+</html>
